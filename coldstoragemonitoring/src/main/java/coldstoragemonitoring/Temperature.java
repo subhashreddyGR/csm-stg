@@ -13,6 +13,8 @@ public class Temperature implements java.io.Serializable
    private java.lang.Double reading;
    private java.lang.String alert;
 
+   private java.lang.Integer alertCount;
+
    public Temperature()
    {
    }
@@ -47,12 +49,23 @@ public class Temperature implements java.io.Serializable
       this.alert = alert;
    }
 
+   public java.lang.Integer getAlertCount()
+   {
+      return this.alertCount;
+   }
+
+   public void setAlertCount(java.lang.Integer alertCount)
+   {
+      this.alertCount = alertCount;
+   }
+
    public Temperature(java.lang.String roomType, java.lang.Double reading,
-         java.lang.String alert)
+         java.lang.String alert, java.lang.Integer alertCount)
    {
       this.roomType = roomType;
       this.reading = reading;
       this.alert = alert;
+      this.alertCount = alertCount;
    }
 
 }
